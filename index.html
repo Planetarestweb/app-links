@@ -1,39 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Скачать приложение</title>
-<style>
-body{
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-flex-direction:column;
-background:#111;
-font-family:Arial;
-margin:0;
-}
-a{
-display:block;
-width:260px;
-padding:18px;
-margin:10px;
-text-align:center;
-text-decoration:none;
-border-radius:14px;
-font-size:22px;
-color:white;
-}
-.ios{background:#007aff;}
-.android{background:#34a853;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Скачать приложение</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, #2b3cff 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #00c2ff 0%, transparent 30%),
+        linear-gradient(135deg, #0b1020, #111827 45%, #0f172a);
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 28px;
+      padding: 36px 24px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .logo {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 18px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #ffffff, #dbeafe);
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: bold;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.18);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    p {
+      margin: 0 0 28px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 18px 20px;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .ios {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      box-shadow: 0 12px 24px rgba(59, 130, 246, 0.35);
+    }
+
+    .android {
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      box-shadow: 0 12px 24px rgba(34, 197, 94, 0.35);
+      margin-bottom: 0;
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+  </style>
 </head>
 <body>
+  <div class="card">
+    <div class="logo">P</div>
 
-<a class="ios" href="https://apps.apple.com/ru/app/planeta-rest/id6749538497" target="_blank">🍏 Скачать для iPhone</a>
-<a class="android" href="https://play.google.com/store/apps/details?id=ru.smartofood.planeta&hl=ru" target="_blank">🤖 Скачать для Android</a>
+    <h1>Скачать приложение</h1>
+    <p>
+      Выберите вашу платформу и установите приложение за пару секунд.
+    </p>
 
+    <a class="btn ios" href="https://apps.apple.com/ru/app/planeta-rest/id6749538497" target="_blank">
+      🍏 Скачать для iPhone
+    </a>
+
+    <a class="btn android" href="https://play.google.com/store/apps/details?id=ru.smartofood.planeta&hl=ru" target="_blank">
+      🤖 Скачать для Android
+    </a>
+
+    <div class="footer">Planeta Rest</div>
+  </div>
 </body>
 </html>
